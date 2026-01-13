@@ -1,15 +1,19 @@
 
-import { Link } from 'react-router-dom';
-import { Camera, Users, Trophy, Sparkles } from 'lucide-react';
+import { useNavigate, Link } from 'react-router-dom';
+import { Users, Camera, Trophy, ArrowRight } from 'lucide-react';
+import logo from '../assets/etcetera-logo.png';
 
 export default function Landing() {
+    const navigate = useNavigate();
+
     return (
-        <div className="flex flex-col items-center justify-center min-h-[80vh] text-center space-y-8 animate-in fade-in duration-700">
+        <div className="space-y-12 pb-10">
 
             {/* Hero Section */}
-            <div className="space-y-4">
-                <div className="inline-block p-3 rounded-2xl bg-gradient-to-br from-purple-500/20 to-blue-500/20 border border-purple-500/30 backdrop-blur-3xl animate-pulse">
-                    <Sparkles className="w-12 h-12 text-purple-400" />
+            <div className="text-center space-y-6 pt-10">
+                <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-slate-800/50 border border-slate-700 text-slate-400 text-xs font-medium animate-in fade-in slide-in-from-top-4 duration-700">
+                    <img src={logo} className="w-4 h-4" alt="logo" />
+                    <span>Presented by Etcetera Club</span>
                 </div>
                 <h1 className="text-5xl md:text-7xl font-black tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-purple-400 via-pink-400 to-blue-400 drop-shadow-lg">
                     Connect<br />Quest
@@ -20,7 +24,7 @@ export default function Landing() {
             </div>
 
             {/* Main CTA */}
-            <div className="w-full max-w-xs pt-4">
+            <div className="w-full max-w-xs pt-4 mx-auto">
                 <Link
                     to="/submit"
                     className="group relative flex items-center justify-center w-full px-8 py-4 bg-gradient-to-r from-purple-600 to-blue-600 rounded-full font-bold text-lg text-white shadow-xl shadow-purple-600/30 hover:scale-105 active:scale-95 transition-all duration-300 overflow-hidden"
@@ -32,34 +36,34 @@ export default function Landing() {
             </div>
 
             {/* Rules Cards */}
-            <div className="grid grid-cols-1 gap-4 w-full max-w-sm text-left pt-8">
-                <div className="glass-card p-4 flex items-start gap-4 hover:bg-slate-800/50 transition-colors">
-                    <div className="bg-blue-500/20 p-2 rounded-lg text-blue-400">
-                        <Users size={20} />
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 w-full text-left pt-8">
+                <div className="glass-card p-6 flex flex-col items-center text-center gap-4 hover:bg-slate-800/50 transition-colors group">
+                    <div className="bg-blue-500/20 p-3 rounded-2xl text-blue-400 group-hover:scale-110 transition-transform">
+                        <Users size={32} />
                     </div>
                     <div>
-                        <h3 className="font-bold text-slate-200">Meet New People</h3>
-                        <p className="text-sm text-slate-500">Find participants from other teams and colleges.</p>
+                        <h3 className="font-bold text-slate-200 text-lg">Meet New People</h3>
+                        <p className="text-sm text-slate-400 mt-2">Find participants from other teams and colleges.</p>
                     </div>
                 </div>
 
-                <div className="glass-card p-4 flex items-start gap-4 hover:bg-slate-800/50 transition-colors">
-                    <div className="bg-pink-500/20 p-2 rounded-lg text-pink-400">
-                        <Camera size={20} />
+                <div className="glass-card p-6 flex flex-col items-center text-center gap-4 hover:bg-slate-800/50 transition-colors group">
+                    <div className="bg-pink-500/20 p-3 rounded-2xl text-pink-400 group-hover:scale-110 transition-transform">
+                        <Camera size={32} />
                     </div>
                     <div>
-                        <h3 className="font-bold text-slate-200">Snap a Selfie</h3>
-                        <p className="text-sm text-slate-500">Take a photo together to prove your connection.</p>
+                        <h3 className="font-bold text-slate-200 text-lg">Snap a Selfie</h3>
+                        <p className="text-sm text-slate-400 mt-2">Take a photo together to prove your connection.</p>
                     </div>
                 </div>
 
-                <div className="glass-card p-4 flex items-start gap-4 hover:bg-slate-800/50 transition-colors">
-                    <div className="bg-amber-500/20 p-2 rounded-lg text-amber-400">
-                        <Trophy size={20} />
+                <div className="glass-card p-6 flex flex-col items-center text-center gap-4 hover:bg-slate-800/50 transition-colors group">
+                    <div className="bg-amber-500/20 p-3 rounded-2xl text-amber-400 group-hover:scale-110 transition-transform">
+                        <Trophy size={32} />
                     </div>
                     <div>
-                        <h3 className="font-bold text-slate-200">Win Points</h3>
-                        <p className="text-sm text-slate-500">Each unique connection = 1 Point. Top the leaderboard!</p>
+                        <h3 className="font-bold text-slate-200 text-lg">Win Points</h3>
+                        <p className="text-sm text-slate-400 mt-2">Each unique connection = 1 Point. Top the leaderboard!</p>
                     </div>
                 </div>
             </div>
