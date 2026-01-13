@@ -29,15 +29,7 @@ export default function Leaderboard() {
         return () => clearInterval(interval);
     }, []);
 
-    // Check if current user is first
-    useEffect(() => {
-        if (leaders.length > 0) {
-            // We need the ID in the leaders array to check ownership
-            // But my previous aggregation logic in supabase.ts returned Object.values(players) which dropped the ID key or I need to make sure 'players' objects have the ID.
-            // Let's assume I'll fix supabase.ts to include ID.
-            // For now, I'll update supabase.ts next.
-        }
-    }, [leaders]);
+
 
     return (
         <div className="space-y-6">

@@ -1,10 +1,9 @@
 
-import { useNavigate, Link } from 'react-router-dom';
-import { Users, Camera, Trophy, ArrowRight } from 'lucide-react';
+import { Link } from 'react-router-dom';
+import { Users, Camera, Trophy } from 'lucide-react';
 import logo from '../assets/etcetera-logo.png';
 
 export default function Landing() {
-    const navigate = useNavigate();
 
     return (
         <div className="space-y-12 pb-10">
