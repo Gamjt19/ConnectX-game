@@ -1,7 +1,7 @@
 
 import { useEffect, useState } from 'react';
 import { getLeaderboard } from '../services/supabase';
-import { Loader2, Medal, Trophy } from 'lucide-react';
+import { Loader2, Trophy } from 'lucide-react';
 import { cn } from '../lib/utils';
 
 import { motion } from 'framer-motion';
