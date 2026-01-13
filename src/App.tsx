@@ -6,6 +6,7 @@ import Submit from './pages/Submit';
 import LiveFeed from './pages/LiveFeed';
 import Leaderboard from './pages/Leaderboard';
 import Admin from './pages/Admin';
+import NotFound from './pages/NotFound';
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
           <Route path="live-feed" element={<LiveFeed />} />
           <Route path="leaderboard" element={<Leaderboard />} />
           <Route path="admin" element={<Admin />} />
+          <Route path="*" element={<NotFound />} />
         </Route>
       </Routes>
     </BrowserRouter>
