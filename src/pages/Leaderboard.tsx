@@ -75,26 +75,26 @@ export default function Leaderboard() {
                                         isMe ? "bg-purple-900/20 lg:rounded-lg" : "hover:bg-slate-800/50 lg:rounded-lg"
                                     )}
                                 >
-                                    <div className="flex-shrink-0 w-12 lg:w-20 text-center font-bold text-slate-500 text-lg lg:text-3xl">
+                                    <div className="flex-shrink-0 w-12 text-center font-bold text-slate-500 text-lg">
                                         {index === 0 ? '🥇' : index === 1 ? '🥈' : index === 2 ? '🥉' : `#${index + 1}`}
                                     </div>
                                     <div className="flex-grow ml-4">
-                                        <h3 className="font-bold text-slate-200 flex items-center gap-2 text-base lg:text-3xl">
+                                        <h3 className="font-bold text-slate-200 flex items-center gap-2">
                                             {player.name}
-                                            {isMe && <span className="text-[10px] lg:text-sm bg-purple-500 text-white px-1.5 py-0.5 rounded align-middle">YOU</span>}
+                                            {isMe && <span className="text-[10px] bg-purple-500 text-white px-1.5 py-0.5 rounded">YOU</span>}
                                         </h3>
-                                        <p className="text-xs lg:text-lg text-slate-500">{player.team}</p>
+                                        <p className="text-xs text-slate-500">{player.team}</p>
                                     </div>
                                     <div className="flex items-center gap-2">
                                         <motion.span
                                             key={player.score}
                                             initial={{ scale: 1.5, color: '#ec4899' }}
                                             animate={{ scale: 1, color: '#c084fc' }}
-                                            className="text-2xl lg:text-4xl font-black text-purple-400"
+                                            className="text-2xl font-black text-purple-400"
                                         >
                                             {player.score}
                                         </motion.span>
-                                        <span className="text-[10px] lg:text-sm uppercase font-bold text-slate-600">Points</span>
+                                        <span className="text-[10px] uppercase font-bold text-slate-600">Points</span>
                                     </div>
                                 </motion.div>
                             )
