@@ -1,0 +1,40 @@
+@import "tailwindcss";
+
+@theme {
+  --color-hackathon-dark: #0f172a;
+  --color-hackathon-purple: #7c3aed;
+  --color-hackathon-blue: #2563eb;
+  --color-hackathon-accent: #f472b6;
+
+  --animate-gradient: gradient 15s ease infinite;
+
+  @keyframes gradient {
+    0% {
+      background-position: 0% 50%;
+    }
+
+    50% {
+      background-position: 100% 50%;
+    }
+
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+}
+
+.animate-gradient-bg {
+  background: linear-gradient(-45deg, #0f172a, #1e1b4b, #312e81, #0f172a);
+  background-size: 400% 400%;
+  animation: gradient 15s ease infinite;
+}
+
+@layer base {
+  body {
+    @apply bg-slate-950 text-slate-50 antialiased;
+  }
+}
+
+@utility glass-card {
+  @apply bg-slate-900/50 backdrop-blur-md border border-slate-800 rounded-xl;
+}
